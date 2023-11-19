@@ -15,21 +15,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'BMI Calculator',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -51,55 +36,52 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(widget.title),
+          backgroundColor: Colors.deepOrange,
+          title: Text(widget.title , style: const TextStyle(color: Colors.white)),
         ),
-        body: Center(
-          child: SizedBox(
-            width: 300,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                
-                /* BMI Title Container Start Here  */
-                
-                Container(
-                    width: 280,
-                    height: 44,
-                    decoration: const BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.elliptical(21, 21),
-                            bottomRight: Radius.elliptical(21, 21))),
-                    child: const Center(
-                        child: Text(
-                      'BMI',
-                      style: TextStyle(color: Colors.white, fontSize: 32),
-                    ))),
-
-                    /* BMI Title Container End Here  */
-
-                /* Text Field Widget */
-
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: MyTextField(),
+        body: Container(
+          color: Colors.white10,
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 450,
+                decoration: BoxDecoration(
+                  color: Colors.deepOrange.shade900,
+                  borderRadius: const BorderRadius.all(Radius.circular(21))
                 ),
-
-                /* button Widget */
-
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: MyButton(),
+                width: 300,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    
+                    /* BMI Title Container Start Here  */
+                    
+                    Container(
+                        width: 280,
+                        height: 44,
+                        decoration: const BoxDecoration(
+                            color: Colors.deepOrange,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.elliptical(21, 21),
+                                bottomRight: Radius.elliptical(21, 21))),
+                        child: const Center(
+                            child: Text(
+                          'BMI',
+                          style: TextStyle(color: Colors.white, fontSize: 32),
+                        ))),
+                    
+                        /* BMI Title Container End Here  */
+                    
+                    /* MyCalulator Widget */
+                    
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: MyCalculator(),
+                    ),
+                  ],
                 ),
-
-                /* Result Text */
-
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text('Result'),
-                )
-              ],
+              ),
             ),
           ),
         ));
