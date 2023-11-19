@@ -6,7 +6,7 @@ A new Flutter project.
 
 ## Overview
 
-This Flutter application is a simple yet effective BMI (Body Mass Index) calculator. It allows users to input their weight in pounds, height in feet and inches, and then calculates their BMI. Based on the BMI value, the app provides information on whether the user is underweight, normal weight, overweight, or obese.
+This Flutter application is a simple yet effective BMI (Body Mass Index) calculator. It allows users to input their weight, height in feet and inches, and then calculates their BMI. Based on the BMI value, the app provides information on whether the user is underweight, normal weight, overweight, or obese.
 
 ## Features
 
