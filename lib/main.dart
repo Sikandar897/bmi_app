@@ -37,26 +37,27 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.deepOrange,
-          title: Text(widget.title , style: const TextStyle(color: Colors.white)),
+          title:
+              Text(widget.title, style: const TextStyle(color: Colors.white)),
         ),
         body: Container(
-          color: Colors.white10,
+          decoration: const BoxDecoration(gradient: LinearGradient(colors: [
+            Color(0xfff83600), Color(0xfff9d423)
+          ])),
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: 450,
                 decoration: BoxDecoration(
-                  color: Colors.deepOrange.shade900,
-                  borderRadius: const BorderRadius.all(Radius.circular(21))
-                ),
+                    color: Colors.deepOrange.shade900,
+                    borderRadius: const BorderRadius.all(Radius.circular(21))),
                 width: 300,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    
                     /* BMI Title Container Start Here  */
-                    
+
                     Container(
                         width: 280,
                         height: 44,
@@ -70,11 +71,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           'BMI',
                           style: TextStyle(color: Colors.white, fontSize: 32),
                         ))),
-                    
-                        /* BMI Title Container End Here  */
-                    
+
+                    /* BMI Title Container End Here  */
+
                     /* MyCalulator Widget */
-                    
+
                     const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: MyCalculator(),
