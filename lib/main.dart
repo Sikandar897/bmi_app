@@ -43,7 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Container(
           decoration: const BoxDecoration(gradient: LinearGradient(colors: [
             Color(0xfff83600), Color(0xfff9d423)
-          ])),
+          ], 
+          begin: FractionalOffset(0.0, 1.1),
+          end: FractionalOffset(1.0, 0.1)
+          )),
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
